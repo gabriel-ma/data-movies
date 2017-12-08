@@ -1,3 +1,16 @@
+Fork created to extract brazilian horror and thriller movies and group them by year.
+files changed:
+* 01-movies.sql
+* 02-import.rb
+* 03-export.rb
+
+The etl process was made using Pentaho Data Integration:
+* ETL.ktr
+
+Data source: 
+* ftp://ftp.fu-berlin.de/pub/misc/movies/database/ 
+_______________________________________________________________________________________________________________________________________________________
+
 The internet movie database, [imdb.com](http://imdb.com/), is a website devoted to collecting movie data supplied by studios and fan.  It claims to be the biggest movie database on the web and is run by amazon.  More about information imdb.com can be found [online](http://imdb.com/help/show_leaf?about), including information about the [data collection process](http://imdb.com/help/show_leaf?infosource).
 
 IMDB makes their [raw data available](http://uk.imdb.com/interfaces/). Unfortunately, the data is divided into many text files and the format of each file differs slightly.  To create one data file containing all the desired information these ruby scripts extract the relevant information and store in a database.  Finally, this data is exported to csv to make it easier to import into data analysis packages.

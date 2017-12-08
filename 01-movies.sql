@@ -1,5 +1,5 @@
 -- sqlite3 movies.sqlite3 < movies.sql
-
+drop table Movies;
 CREATE TABLE Movies (
 id INTEGER PRIMARY KEY,
 title varchar(250),
@@ -9,7 +9,8 @@ length integer,
 imdb_rating float,
 imdb_votes integer,
 imdb_rating_votes varchar(10),
-mpaa_rating varchar(5)
+mpaa_rating varchar(5),
+country varchar(100)
 );
 
 CREATE TABLE Ratings (id INTEGER PRIMARY KEY, movie_id integer, score varchar(10), outof10 float, votes integer);
