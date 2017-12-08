@@ -1,5 +1,5 @@
 Fork created to extract brazilian horror and thriller movies and group them by year.
-files changed:
+Changed files:
 * 01-movies.sql
 * 02-import.rb
 * 03-export.rb
