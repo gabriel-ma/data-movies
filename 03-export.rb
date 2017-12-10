@@ -10,13 +10,6 @@ $ratings_map = {"." => 0, "0" => 4.5, "1" => 14.5, "2" => 24.5, "3" => 34.5, "4"
 def genres_binary(id)
 	genres = $db.execute("SELECT genre FROM Genres where movie_id = #{id};").flatten
 
-	if id == 568334
-		File.open("grrrr.txt", "w") do |out|
-			out << genres
-		end
-		puts genres
-		puts genres.include? "Horror"
-	end
 	$genres_of_interest.map { |genre| (genres.include? genre) ? 1 : 0}
 end
 
