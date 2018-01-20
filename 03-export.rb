@@ -31,7 +31,7 @@ File.open("movies.csv", "w") do |out|
 	out << ['id',
 		'title', 'year', 
 		'country', $genres_of_interest
-	].flatten.join(",") + "\n"
+	].flatten.join("%") + "\n"
 	$db.execute(sql) do |row| 
 		puts i if (i = i + 1) % 5000 == 0	
 		out << [
@@ -39,6 +39,6 @@ File.open("movies.csv", "w") do |out|
 			row[1], 
 			row[2], 
 			row[3], genres_binary(row[0])
-		].flatten.join(",") + "\n"
+		].flatten.join("%") + "\n"
 	end
 end
